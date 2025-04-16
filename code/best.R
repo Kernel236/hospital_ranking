@@ -39,7 +39,7 @@ best <- function(state, outcome) {
 
 ##########################################################################
 # try it out #
-#best("TX", "heart attack")
+#best("AL", "heart attack")
 #best("TX", "heart failure")
 #best("MD", "heart attack")
 #best("TX", "pneumonia")
