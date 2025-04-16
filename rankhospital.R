@@ -6,8 +6,6 @@
 # 3. num: a character string indicating the ranking of the hospital
 #return the name of the hospital with the specified rank in the specified state
 
-library(dyplr)
-
 rankhospital <- function(state, outcome, num = "best") {
   # Read the data
   dataset_outcome <- read.csv(
@@ -77,13 +75,13 @@ rankhospital <- function(state, outcome, num = "best") {
 }
   
 # Test the function
-rankhospital("TX", "heart attack", 4)
-rankhospital("TX", "heart failure", 4)  
-rankhospital("MD", "heart attack", "worst")
-rankhospital("TX", "pneumonia", "best")
+#rankhospital("TX", "heart attack", 4)
+#rankhospital("TX", "heart failure", 4)  
+#rankhospital("MD", "heart attack", "worst")
+#rankhospital("TX", "pneumonia", "best")
 
 
 #Test error handling
-rankhospital("AAA", "heart attack", 4) #Should output invalid state
-rankhospital("TX", "Dizziness", 4) #Should output invalid outcome
-rankhospital("MD", "heart attack", 1000) #Should output NA (out of range)
+#rankhospital("AAA", "heart attack", 4) #Should output invalid state
+#rankhospital("TX", "Dizziness", 4) #Should output invalid outcome
+#rankhospital("MD", "heart attack", 1000) #Should output NA (out of range)

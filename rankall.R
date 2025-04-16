@@ -65,15 +65,15 @@ rankall <- function(outcome, num = "best") {
 }
 
 # Test the function
-rankall("heart attack", 4)
-rankall("heart failure", 4)  
-rankall("heart attack", "worst")
-rankall("pneumonia", "best")
+#rankall("heart attack", 4)
+#rankall("heart failure", 4)  
+#rankall("heart attack", "worst")
+#rankall("pneumonia", "best")
 
 
 #Test error handling
-rankall("Dizziness", 4) #Should output invalid outcome
-rankall("heart attack", 1000) #Should output NA (out of range)
-head(rankall("heart attack", 20), 10)
+#rankall("Dizziness", 4) #Should output invalid outcome
+#rankall("heart attack", 1000) #Should output NA (out of range)
+#head(rankall("heart attack", 20), 10)
 
 

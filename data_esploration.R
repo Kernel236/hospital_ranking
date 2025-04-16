@@ -1,5 +1,6 @@
 # Import file 
 library(readr)
+library(dplyr)
 
 #Read coulmns as character and change when use it
 dataset_outcome <- read.csv(
@@ -46,23 +47,26 @@ hist(dataset_outcome_pneumonia,
      breaks = 60)
 
 #Looking at the best hospital for a given disease in term of 30 days mortality rate
-source(best.R)
-best("AL", "heart attack")
-best("TX", "heart failure")
+source("best.R")
+best("SC", "heart attack")
+best("NY", "pneumonia")
 best("MD", "heart attack")
-best("TX", "pneumonia")
+best("AK", "pneumonia")
 
 #Looking at the best hospital for a given disease in term of 30 days mortality rate in a specific State
-source(rankhospital.R)
-rankhospital("TX", "heart attack", 4)
-rankhospital("TX", "heart failure", 4)  
-rankhospital("MD", "heart attack", "worst")
-rankhospital("TX", "pneumonia", "best")
+source("rankhospital.R")
+rankhospital("NJ", "pneumonia", "worst")
+rankhospital("NV", "heart failure", 10)  
+rankhospital("NY", "heart attack", 7)
+rankhospital("HI", "pneumonia", 4)
 
 #Overall ranking for a given disease in terms of 30 days Mortality rate
-source(rankall.R)
+source("rankall.R")
 rankall("heart attack", 4)
 rankall("heart failure", 4)  
 rankall("heart attack", "worst")
 rankall("pneumonia", "best")
 head(rankall("heart attack", 20), 10)
+sour
+
+rankall("heart attack", 4)
